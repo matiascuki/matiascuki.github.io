@@ -42,13 +42,14 @@ export default function Rankings() {
           }
 
           userHelper.push(userData)
-          setUsers(userHelper)
-
         }
+        
+        setUsers(userHelper)
       })
       .catch(err => console.error(err))
   }, []);
 
+  
     const navigate = useNavigate()
 
     const handleClick = () =>{
