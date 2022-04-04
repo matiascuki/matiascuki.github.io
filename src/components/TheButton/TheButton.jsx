@@ -32,7 +32,7 @@ export default function TheButton() {
             if (user !== null && user !== undefined) {
                 setClicks(clicks + 1)
                 const userInfo = JSON.parse(user)
-                userInfo.clicks =JSON.parse(clicks)
+                userInfo.clicks = JSON.parse(clicks)
                 localStorage.setItem('user', JSON.stringify(userInfo));
             }
         }, getRandomInt(1, 7) * 1000)
@@ -47,6 +47,12 @@ export default function TheButton() {
         timer.setTimeLeft(60)
     }
 
+    const handleLink = () => {
+        const user = window.localStorage.getItem('user')
+        const userInfo = JSON.parse(user)
+        userInfo.clicks = JSON.parse(clicks)
+        localStorage.setItem('user', JSON.stringify(userInfo));
+    }
 
     return (
         <div className='thebutton-container'>
@@ -58,7 +64,7 @@ export default function TheButton() {
 
                 <div className='the-button-clicks'> {clicks} times clicked</div>
             </div>
-            <Link to='/rankings' className='rankings nav-btn outlined-btn'> Rankings</Link>
+            <Link to='/rankings' onClick={handleLink} className='rankings nav-btn outlined-btn'> Rankings</Link>
         </div>
     )
 }
