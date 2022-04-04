@@ -1,0 +1,9 @@
+
+.wrapper {
+    height: 100vh;
+    padding-top: 48px;
+    background: var(--clr-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

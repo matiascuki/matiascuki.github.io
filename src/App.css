@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Custom styles */
+
+:root {
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-lightGray: #f6f7f8;
+    --clr-gray: #dae0e6;
+    --clr-midGray: #878a8c;
+    --clr-darkGray: #444444;
+    --clr-dark: #303030;
+    --clr-border: #edeff1;
+    --clr-borderDarker: #cccccc;
+    --clr-accent: #0079d3;
+    --clr-accentLighter: #3691d6;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs:   0.25em 0.25em 0.75em rgba(0,0,0,.25);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* General items */
+body {
+    font-family: Noto Sans,Arial,sans-serif;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon{
+    font-size: var(--fs-h3);
+    color: var(--clr-midGray);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Buttons  */
+
+.outlined-btn{
+    border: 1px solid var(--clr-accent);
+    color: var(--clr-accent);
 }
 
-.App-link {
-  color: #61dafb;
+.outlined-btn:hover, .outlined-btn:active {
+    background-color: var(--clr-lightGray);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.filled-btn{
+    background-color: var(--clr-accent);
+    color: var(--clr-light)
+}
+
+.filled-btn:hover, .filled-btn:active{
+    background-color: var(--clr-accentLighter);
 }

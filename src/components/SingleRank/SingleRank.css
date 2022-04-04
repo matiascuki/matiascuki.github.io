@@ -1,0 +1,11 @@
+.single-rank{
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-div {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8ea0ac;
+    border-radius: 4px;
+}
